@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>今天喝什麼？</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/Drink.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <div class="random">
+        <div class="container">
+            <h1>今天喝什麼？</h1>
+            <div id="result"></div>
+            <img id="menuImage" src="" alt="" style="display:none;">
+            <button id="randombutton" onclick="selectRandomShop()">隨機選擇飲料店</button>
+        </div>
+    </div>
+    <!-- 點餐區 -->
+    <div class="order wrapper">
+        <h4>ORDER HERE</h4>
+        <form id="orderForm">
+            <label><b>姓名：</b><input type="text" id="name" placeholder="你是誰？" required></label>
+            <label><b>品項：</b><input type="text" id="item" placeholder="點什麼？" required></label>
+            <label><b>加料區：</b><input type="text" id="addition" placeholder="加料哦"></label>
+            <label>
+                <b>尺寸：</b>
+                <select id="size">
+                    <option selected>L</option>
+                    <option>M</option>
+                </select>
+            </label>
+            <label>
+                <b>甜度：</b>
+                <select id="sugar">
+                    <option>無糖</option>
+                    <option selected>微糖</option>
+                    <option>半糖</option>
+                    <option>少糖</option>
+                    <option>全糖</option>
+                </select>
+            </label>
+            <label>
+                <b>冰量：</b>
+                <select id="ice">
+                    <option>熱</option>
+                    <option>溫</option>
+                    <option>去冰</option>
+                    <option selected>微冰</option>
+                    <option>少冰</option>
+                    <option>正常冰</option>
+                </select>
+            </label>
+            <label>
+                <b>金額：</b>
+                <input type="number" id="price" placeholder="$$$" min="0" required>
+            </label>
+            <br><br><br>
+            <button type="submit">送出</button>
+        </form>
+    </div>
+    <!-- 訂餐結果顯示區 -->
+    <div class="view">
+        <table class="wrapper">
+            <thead>
+                <tr>
+                    <th>序</th>
+                    <th>姓名</th>
+                    <th>品項名</th>
+                    <th>加料</th>
+                    <th>尺寸</th>
+                    <th>甜度</th>
+                    <th>冰量</th>
+                    <th>金額</th>
+                </tr>
+            </thead>
+            <tbody id="orderTableBody">
+                <!-- Orders will be inserted here -->
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>加總：</td>
+                    <td id="totalPrice">0</td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+    <!-- Our application script -->
+    <script src="js/App.js"></script>
+</body>
+</html>
