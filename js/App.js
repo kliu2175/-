@@ -16,6 +16,7 @@ const drinkShops = [
     "上宇林",
     "烏弄",
     "初韻",
+    "萬波",
     "花火禾茶",
     "馬祖奶茶",
     "茗茗究市",
@@ -25,22 +26,23 @@ const drinkShops = [
 ];
 
 const menuImages = {
-    "可不可": "https://scontent.ftpe7-2.fna.fbcdn.net/v/t39.30808-6/463333113_2990076151174647_3709884838758181781_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=f727a1&_nc_ohc=sCmPCmy4PXgQ7kNvgG-N4W7&_nc_zt=23&_nc_ht=scontent.ftpe7-2.fna&_nc_gid=A4DBcUBZGBP-B4SuJWkKMux&oh=00_AYAvKfTn4vaF1FCqGDykAoCUUhqQlQR8CpxeUxqqJwZQmg&oe=67139282",
-    "茶學苑": "https://scontent.ftpe7-3.fna.fbcdn.net/v/t39.30808-6/463062770_2990076327841296_3757478358151022934_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=f727a1&_nc_ohc=rQcPD4mDyNAQ7kNvgG9xCQj&_nc_zt=23&_nc_ht=scontent.ftpe7-3.fna&_nc_gid=AJHRmpBadENSluR-qljq1Ja&oh=00_AYA77rPaIt2wv-rPkyuHKObiDdKao12LY94wj6or6rWUuw&oe=6713A0EE",  // 請替換為實際的圖片URL
-    "新井茶": "https://scontent.ftpe7-3.fna.fbcdn.net/v/t39.30808-6/463410658_2990077267841202_7779726754212916881_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=f727a1&_nc_ohc=3tOtNOeWNl8Q7kNvgGZn151&_nc_zt=23&_nc_ht=scontent.ftpe7-3.fna&_nc_gid=Af_Q1cJonb0A0_-lbDYiDFQ&oh=00_AYBYrqvNqzatL2PN7jSugPq9i2B1XTSlOz9Adtfg1tJH-g&oe=67138111",  // 請替換為實際的圖片URL
-    "50嵐": "https://scontent.ftpe7-1.fna.fbcdn.net/v/t39.30808-6/463200604_2990075501174712_4158242336052013381_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=f727a1&_nc_ohc=6KspE9p91REQ7kNvgGtN3HM&_nc_zt=23&_nc_ht=scontent.ftpe7-1.fna&_nc_gid=AHeceC30AiNFqA37HP0QKbt&oh=00_AYAfoTe3Zq_BDgnKTAK35b2JFvSN1FjgyStLbmBTwh6FFw&oe=67138ED7",  // 請替換為實際的圖片URL
-    "清心福全": "https://scontent.ftpe7-4.fna.fbcdn.net/v/t39.30808-6/463340874_2990077044507891_7484948481723085116_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=f727a1&_nc_ohc=JQ7d9hTRD4cQ7kNvgG2Nqza&_nc_zt=23&_nc_ht=scontent.ftpe7-4.fna&_nc_gid=AU4qc8wLmWACHE_yaAh4Z0h&oh=00_AYBzuNrc4Lrb9RwPadnRU3kzvRCXryIfyRNpxwxFlmDIvw&oe=67139BEC",  // 請替換為實際的圖片URL
-    "五桐號": "https://scontent.ftpe7-1.fna.fbcdn.net/v/t39.30808-6/463197455_2990085611173701_5128935838500832920_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=f727a1&_nc_ohc=O44PBMccl7gQ7kNvgEqEk7q&_nc_zt=23&_nc_ht=scontent.ftpe7-1.fna&_nc_gid=A12r8XixCZmmhyhjDf_YEoo&oh=00_AYB0iOQDdza-cR2B_We5pgP0zsve3tnWlNDs8FRawxyT1Q&oe=6713B691",  // 請替換為實際的圖片URL
-    "迷客夏": "https://scontent.ftpe7-1.fna.fbcdn.net/v/t39.30808-6/463341529_2990076591174603_4626894757057732761_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=f727a1&_nc_ohc=iyXCk6430EsQ7kNvgEODTrd&_nc_zt=23&_nc_ht=scontent.ftpe7-1.fna&_nc_gid=AIRbdMklgHPCfsz6mnSX3Th&oh=00_AYA-4s03shI6rE1kgbGSwngWTrCCQxqaLIIkr9ZSH1vvsA&oe=67138769",  // 請替換為實際的圖片URL
-    "得正": "https://scontent.ftpe7-1.fna.fbcdn.net/v/t39.30808-6/463384887_2990076834507912_1285351997670815225_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=f727a1&_nc_ohc=9IVuwm7iaRcQ7kNvgEei5IT&_nc_zt=23&_nc_ht=scontent.ftpe7-1.fna&_nc_gid=AMjYBOD42b_v6J7EIIPMp-N&oh=00_AYCa39xmevaWkGmUM648leQ9geXlhjTzftNkUOZMK4kC0w&oe=6713A6B5",  // 請替換為實際的圖片URL
-    "鶴茶樓": "https://scontent.ftpe7-2.fna.fbcdn.net/v/t39.30808-6/463412128_2990077764507819_9106366582690583375_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=f727a1&_nc_ohc=1asqP-dsxjsQ7kNvgH1RdfJ&_nc_zt=23&_nc_ht=scontent.ftpe7-2.fna&_nc_gid=AkfWUubNMyhZ30FA5B2rEzW&oh=00_AYCXYUHuFQPscN0GSCF4Pp2Me2IBrAnRNb4H-HHC3e0_6w&oe=67138162",  // 請替換為實際的圖片URL
-    "龜記": "https://scontent.ftpe7-1.fna.fbcdn.net/v/t39.30808-6/463230124_2990077464507849_5328361325400463031_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=f727a1&_nc_ohc=Ehre4rx9xYoQ7kNvgGGxcyU&_nc_zt=23&_nc_ht=scontent.ftpe7-1.fna&_nc_gid=A53iXtvf6BBWTBj_q_1T05h&oh=00_AYAnLFHipMqCfGyNbq2OBo9Uvw5RC9U25ex2aLK07OwwSg&oe=67139E4F",  // 請替換為實際的圖片URL
-    "麻古": "https://scontent.ftpe7-3.fna.fbcdn.net/v/t39.30808-6/463062770_2990095311172731_1369583144115725396_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=f727a1&_nc_ohc=iyoQVaP288MQ7kNvgFnReKe&_nc_zt=23&_nc_ht=scontent.ftpe7-3.fna&_nc_gid=A5GNwbd3zSR0WzC_2R4Yb_m&oh=00_AYAg0wi1jU33NGG6CvzCmDUGB0m3yq7OTe4tDvJIozcm-g&oe=6713900A",  // 請替換為實際的圖片URL
-    "Tea's原味": "https://scontent.ftpe7-1.fna.fbcdn.net/v/t39.30808-6/463261294_2990075894508006_4613930266947648159_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=f727a1&_nc_ohc=zU-0_gGuqzsQ7kNvgF0BwD-&_nc_zt=23&_nc_ht=scontent.ftpe7-1.fna&_nc_gid=AHP28z6h_FlwJRvgWYqjcfN&oh=00_AYCPZi9Fvj8u_aJ_72uZpkNdCrctM5eXVRQzs2HlQfHxag&oe=67138403",  // 請替換為實際的圖片URL
-    "LOHASS": "https://scontent.ftpe7-1.fna.fbcdn.net/v/t39.30808-6/463274661_2990094151172847_5868705582006297098_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=f727a1&_nc_ohc=FuK252IZAAgQ7kNvgHGib-O&_nc_zt=23&_nc_ht=scontent.ftpe7-1.fna&_nc_gid=Abn1Qoeu_zqX5Ro0B1HGADS&oh=00_AYAKjFz_TyjtjW_cP4U2g9qT-gJywUfZOIfSI61VSzMtLA&oe=67139BE5",  // 請替換為實際的圖片URL
-    "一沐日": "https://scontent.ftpe7-2.fna.fbcdn.net/v/t39.30808-6/463283937_2990094384506157_4843617053620415740_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=f727a1&_nc_ohc=ZqP1PLK0yDQQ7kNvgF0KieG&_nc_zt=23&_nc_ht=scontent.ftpe7-2.fna&_nc_gid=ARiHeCpTakb9TwlzSDNFLu7&oh=00_AYDxUzmc7wPnQwQZH8xQgL4gb0WPwGHgXLztaHTfCtQsuQ&oe=6713B223",  // 請替換為實際的圖片URL
-    "上宇林": "https://scontent.ftpe7-2.fna.fbcdn.net/v/t39.30808-6/463263000_2990094847839444_1598459204472912094_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=f727a1&_nc_ohc=FZITN1LMqEsQ7kNvgGoqYSK&_nc_zt=23&_nc_ht=scontent.ftpe7-2.fna&_nc_gid=A8HCfoMHNMs8fabRCvESfxL&oh=00_AYAT8ak3Qxi-Waf6oNVXBmO13W6wibNQs1M4k-aXKM5Lwg&oe=6713AB9E",  // 請替換為實際的圖片URL
-    "烏弄": "https://scontent.ftpe7-3.fna.fbcdn.net/v/t39.30808-6/463147486_2990095127839416_163468495503265442_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=f727a1&_nc_ohc=ZfbYs9sA5DsQ7kNvgGJ5OHO&_nc_zt=23&_nc_ht=scontent.ftpe7-3.fna&_nc_gid=AKp-x9GB-LkwO0WEVLM_bN3&oh=00_AYBEF8tIvkk-w5Ynfj5UoYcerpy0hGyVBBiAV7aoaS5NdQ&oe=6713BACB",  // 請替換為實際的圖片URL
+    "可不可": "https://i.imgur.com/RqwAns9.jpeg",   // 請替換為實際的圖片URL
+    "茶學苑": "https://i.imgur.com/B1Fs0z0.jpeg",  // 請替換為實際的圖片URL
+    "新井茶": "https://i.imgur.com/N04d1ec.jpeg",  // 請替換為實際的圖片URL
+    "50嵐": "https://i.imgur.com/2DUTTBS.png",  // 請替換為實際的圖片URL
+    "清心福全": "https://i.imgur.com/ifO9wYO.jpeg",  // 請替換為實際的圖片URL
+    "五桐號": "https://i.imgur.com/kd1VkCW.jpeg",  // 請替換為實際的圖片URL
+    "迷客夏": "https://i.imgur.com/CxJRb3I.jpeg",  // 請替換為實際的圖片URL
+    "得正": "https://i.imgur.com/oC0lmgj.jpeg",  // 請替換為實際的圖片URL
+    "鶴茶樓": "https://i.imgur.com/xqsTstt.jpeg",  // 請替換為實際的圖片URL
+    "龜記": "https://i.imgur.com/iQSr8JU.jpeg",  // 請替換為實際的圖片URL
+    "麻古": "https://i.imgur.com/ewDsEaO.jpeg",  // 請替換為實際的圖片URL
+    "Tea's原味": "https://i.imgur.com/gkav3jY.png",  // 請替換為實際的圖片URL
+    "LOHASS": "https://i.imgur.com/pfvW6w9.jpeg",  // 請替換為實際的圖片URL
+    "一沐日": "https://i.imgur.com/NqTIuEY.jpeg",  // 請替換為實際的圖片URL
+    "上宇林": "https://i.imgur.com/TvlL4EX.png",  // 請替換為實際的圖片URL
+    "烏弄": "https://i.imgur.com/8NNqN17.jpeg",  // 請替換為實際的圖片URL
+    "萬波": "https://i.imgur.com/Du0zUgH.jpeg",  // 請替換為實際的圖片URL
     "初韻": "https://truewin2018.com.tw/wp-content/uploads/2024/07/240726_%E5%88%9D%E9%9F%BB-A3%E8%8F%9C%E5%96%AE-%E4%B8%AD%E8%8B%B1%E3%80%81%E7%86%B1%E9%87%8F_%E9%81%A9%E7%94%A8%E7%8F%BE%E5%A0%B4.jpg",  // 請替換為實際的圖片URL
     "花火禾茶": "https://picdn.gomaji.com/uploads/stores/226/205226/333394/0811%E8%8A%B1%E7%81%AB%E7%A6%BE%E8%8C%B6a5%E8%8F%9C%E5%96%AE_210x148mm_8192%E5%83%8F%E7%B4%A0-(1).jpg",  // 請替換為實際的圖片URL
     "馬祖奶茶": "https://sansalife.com/wp-content/uploads/pixnet/1654404921-3347409087-g_l.jpg",  // 請替換為實際的圖片URL
